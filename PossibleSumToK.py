@@ -15,4 +15,16 @@ def approach1(numbers, k):
     return False
 
   
+#if asked to print indexed as well then can try this approach
+def approach2(numbers, k):
+    myDict = dict()
+    for i in range(0,len(numbers)):
+        if (k-numbers[i]) in myDict:
+            return [ myDict[k-numbers[i]], i]
+        else:
+            myDict[numbers[i]] = i
+            
+    return [-1,-1]
+
 print(approach1([10, 15, 3 ,7], 17))
+print(approach2([10, 15, 3 ,7], 17))
