@@ -1,3 +1,5 @@
+import numpy
+
 def calculateMultiplication(nums):
     output = [1]
     prev = 1
@@ -16,5 +18,14 @@ def calculateMultiplication(nums):
         output[i] *= next
         
     return output
+
+# using numpy.prod to get multiplication
+def calculateMultiplicationUsingNumpy(nums):
+    multipliedResult = numpy.prod(nums)
+    output = []
+    for i in nums:
+        output.append(multipliedResult//i)
+    return output
     
-print(calculateMultiplication([1,2,3,4]))
+# print(calculateMultiplication([1,2,3,4]))
+print(calculateMultiplicationUsingNumpy([1,2,3,4]))
