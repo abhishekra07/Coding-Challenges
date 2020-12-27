@@ -26,6 +26,17 @@ def calculateMultiplicationUsingNumpy(nums):
     for i in nums:
         output.append(multipliedResult//i)
     return output
+
+def calculateMultiplicationUsingDivision(nums):
+    multipliedResult = 1;
+    for num in nums:
+        multipliedResult *= num
+        
+    output = []
+    for i in nums:
+        output.append(multipliedResult//i)
+    return output
     
-# print(calculateMultiplication([1,2,3,4]))
+print(calculateMultiplication([1,2,3,4]))
 print(calculateMultiplicationUsingNumpy([1,2,3,4]))
+print(calculateMultiplicationUsingDivision([1,2,3,4]))
