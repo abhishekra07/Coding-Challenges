@@ -45,3 +45,14 @@ def sockMerchant(n, ar):
         count += pairs[i] // 2
         
     return count
+   
+def sockMerchant2(n, ar):
+    my_set = set()
+    pairs = 0
+    for item in ar:
+        if item not in my_set:
+            my_set.add(item)
+        else:
+            pairs += 1
+            my_set.remove(item)
+    return pairs
