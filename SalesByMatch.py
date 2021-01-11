@@ -32,3 +32,16 @@ Sample Output
 3
 
 """
+
+def sockMerchant(n, ar):
+    pairs = {}
+    for item in range(len(ar)):
+        if ar[item] in pairs.keys():
+            pairs[ar[item]] += 1
+        else:
+            pairs[ar[item]] = 1
+    count = 0
+    for i in pairs.keys():
+        count += pairs[i] // 2
+        
+    return count
