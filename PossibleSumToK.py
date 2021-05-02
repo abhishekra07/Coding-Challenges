@@ -7,11 +7,16 @@ try to do it in one pass
 """
 # use twon pointers one start from begining another from end
 def approach1(numbers, k):
-    j = len(numbers) - 1
-    for i in range(0,len(numbers)):
-        if i < j and (numbers[i] + numbers[j] == k):
+    numbers.sort()
+    i, j = 0, len(numbers)-1
+    while i <= j:
+        sum = numbers[i] + numbers[j]
+        if sum == k:
             return True
-        
+        if sum > k:
+            j -= 1
+        if sum < k:
+            i += 1
     return False
 
   
