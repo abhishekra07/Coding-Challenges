@@ -1,3 +1,16 @@
+/*
+Write a method that is getting 2 sorted arrays as input and returning the intersection between them
+
+Examples:
+ar1[] = {1, 5, 10, 20, 40, 80}
+ar2[] = {6, 7, 20, 80, 100}
+Output: 20, 80
+
+ar2[] = {3, 4, 5, 5, 10}
+ar3[] = {5, 5, 10, 20}
+Output: 5, 5, 10
+*/
+
 import java.util.HashSet;
 
 public class FindIntersection {
