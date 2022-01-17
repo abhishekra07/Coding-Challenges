@@ -83,6 +83,7 @@ public class TheLeadGameSolution {
 			}
 		}
 		System.out.println(winner + " " + lead);
+		sc.close();
 	}
 
 }
